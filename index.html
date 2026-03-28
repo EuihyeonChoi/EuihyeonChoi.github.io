@@ -104,7 +104,7 @@
             font-weight: 700;
         }
 
-        /* --- New Styling for Intro Section --- */
+        /* Intro & Bio Section */
         .intro-container {
             display: flex;
             align-items: flex-start;
@@ -117,14 +117,14 @@
         }
 
         .intro-photo-area {
-            flex: 0 0 220px; /* Fixed width for photo container */
+            flex: 0 0 220px;
             text-align: center;
         }
 
         .profile-img {
             width: 100%;
             height: auto;
-            border-radius: 50%; /* Make it a circle */
+            border-radius: 50%;
             border: 5px solid var(--secondary-color);
             box-shadow: 0 4px 8px rgba(0,0,0,0.15);
         }
@@ -137,11 +137,11 @@
         }
 
         .intro-text-area {
-            flex: 1; /* Take remaining space */
+            flex: 1;
         }
 
         .intro-text-area h2 {
-            border-bottom: none; /* Remove line just for this H2 */
+            border-bottom: none;
             margin-bottom: 10px;
             margin-top: 0;
         }
@@ -151,7 +151,6 @@
             margin-bottom: 15px;
             color: #444;
         }
-        /* -------------------------------------- */
 
         /* Lists & Entries */
         .entry {
@@ -196,6 +195,23 @@
             margin-bottom: 10px;
         }
 
+        /* Research Interests Tags */
+        .interest-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 30px;
+        }
+        
+        .interest-tag {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.95rem;
+            font-weight: 500;
+        }
+
         /* Buttons & Links */
         a {
             color: var(--primary-color);
@@ -225,7 +241,6 @@
             transform: translateY(-2px);
         }
 
-        /* Responsive adjustments for mobile */
         @media (max-width: 768px) {
             header h1 { font-size: 2.2rem; }
             .tab-nav button { padding: 12px 15px; font-size: 14px; }
@@ -260,48 +275,63 @@
                     <p class="photo-placeholder-text">Add your photo (e.g., profile.jpg) to your GitHub repository.</p>
                 </div>
                 <div class="intro-text-area">
-                    <h2>About Me</h2>
-                    <p>Hello! I am Euihyeon Choi, currently a Ph.D. student in the Daniel Guggenheim School of Aerospace Engineering at the Georgia Institute of Technology. I am honored to be advised by Prof. Koki Ho within the Space Systems Optimization Group.</p>
-                    <p>My research lies at the intersection of astrodynamics, systems engineering, and mathematical optimization. I am passionate about developing innovative, optimal solutions for complex aerospace challenges to enable sustainable and efficient space exploration.</p>
-                    <p>My specific areas of interest include space logistics architecture optimization, on-orbit servicing, assembly, and manufacturing (OSAM), satellite constellation management, and multi-agent robotic routing for planetary exploration.</p>
-                    <p>Before joining Georgia Tech, I gained practical experience as a researcher at the Aerospace Technology Research Institute within the Agency for Defense Development (ADD) in South Korea. I hold both a Master's and a Bachelor's degree in Aerospace Engineering from KAIST, where I also double-majored in Physics as an undergraduate.</p>
-                    <p>Please feel free to explore my publications and projects using the tabs above. If you would like to discuss potential collaborations or shared research interests, I encourage you to reach out.</p>
+                    <h2>Biography</h2>
+                    <p>Hello! I am Euihyeon Choi, a Ph.D. Student in the Daniel Guggenheim School of Aerospace Engineering at the Georgia Institute of Technology[cite: 1, 4, 5]. I am currently advised by Prof. Koki Ho[cite: 6].</p>
+                    <p>Before joining Georgia Tech, I worked as a Researcher at the Aerospace Technology Research Institute within the Agency for Defense Development (ADD) in South Korea[cite: 18]. I received my Master of Science in Aerospace Engineering [cite: 7], as well as a Bachelor of Science in both Aerospace Engineering and Physics (Double Major) from the Korea Advanced Institute of Science and Technology (KAIST)[cite: 12, 13, 14].</p>
                 </div>
+            </div>
+
+            <h2>Research Interests</h2>
+            <div class="interest-tags">
+                <span class="interest-tag">Space Logistics & Orbital Depots</span>
+                <span class="interest-tag">Planetary Surface Routing</span>
+                <span class="interest-tag">Multi-Agent Task Allocation</span>
+                <span class="interest-tag">Mathematical Optimization</span>
+                <span class="interest-tag">Satellite Constellation Servicing</span>
             </div>
 
             <h2>Education</h2>
-            
             <div class="entry">
                 <div class="entry-header">
                     <span class="entry-title">Georgia Institute of Technology</span>
-                    <span class="entry-date">Aug. 2024 – Present</span>
+                    <span class="entry-date">Aug. 2024 – Present [cite: 9]</span>
                 </div>
                 <ul>
-                    <li>Ph.D. Student in Aerospace Engineering (GPA: 4.0/4.0).</li>
-                    <li>Advisor: Prof. Koki Ho.</li>
+                    <li>Ph.D. Student in Aerospace Engineering (GPA: 4.0/4.0)[cite: 5].</li>
+                    <li>Advisor: Prof. Koki Ho[cite: 6].</li>
                 </ul>
             </div>
 
             <div class="entry">
                 <div class="entry-header">
                     <span class="entry-title">Korea Advanced Institute of Science and Technology (KAIST)</span>
-                    <span class="entry-date">Aug. 2022 – Aug. 2024</span>
+                    <span class="entry-date">Aug. 2022 – Aug. 2024 [cite: 10]</span>
                 </div>
                 <ul>
-                    <li>Master of Science in Aerospace Engineering (GPA: 4.18/4.3).</li>
-                    <li>Thesis: Optimal planetary surface routing considering synergy value system and heterogeneous agents.</li>
-                    <li>Advisor: Prof. Jaemyung Ahn.</li>
+                    <li>Master of Science in Aerospace Engineering (GPA: 4.18/4.3)[cite: 7].</li>
+                    <li>Thesis: Optimal planetary surface routing considering synergy value system and heterogeneous agents[cite: 11].</li>
+                    <li>Advisor: Prof. Jaemyung Ahn[cite: 11].</li>
                 </ul>
             </div>
 
             <div class="entry">
                 <div class="entry-header">
                     <span class="entry-title">Korea Advanced Institute of Science and Technology (KAIST)</span>
-                    <span class="entry-date">Mar. 2015 – Feb. 2019</span>
+                    <span class="entry-date">Mar. 2015 – Feb. 2019 [cite: 21]</span>
                 </div>
                 <ul>
-                    <li>Bachelor of Science in Aerospace Engineering.</li>
-                    <li>Bachelor of Science in Physics (Double Major).</li>
+                    <li>Bachelor of Science in Aerospace Engineering[cite: 13].</li>
+                    <li>Bachelor of Science in Physics (Double Major)[cite: 14].</li>
+                </ul>
+            </div>
+
+            <h2>Recent Publications</h2>
+            <div class="entry">
+                <ul>
+                    <li>J. Choi, J. Lee, E. Choi and J. Ahn, "Sequential Vertiport Location Optimization Considering Uncertain Social Benefit," Journal of Aerospace Information Systems, 2026 (Accepted)[cite: 25].</li>
+                    <li>E. Choi and K. Ho, "Orbital Depot Location Optimization for Satellite Constellation Servicing with Low-Thrust Transfers," Journal of Spacecraft and Rockets, Vol. 63, No. 1, 2026, pp.4-13[cite: 26, 27].</li>
+                    <li>C. Moon, E. Choi, and J. Ahn, "Aerial-Ground Collaborative Routing with Uncertain Exploration Value," International Journal of Aeronautical & Space Sciences, Vol. 26, 2025, pp. 2817-2841[cite: 28, 29].</li>
+                    <li>T. Noro, K. Ho, E. Choi. S. Han, and M. Isaji, "Low-Thrust Trajectory Optimization via Sequential Convex Programming for On-Orbit Servicing in GEO," The Japan Society for Aeronautical and Space Sciences 57th Annual Meeting, April 2026[cite: 42].</li>
                 </ul>
             </div>
         </div>
@@ -310,19 +340,22 @@
             <h2>Journal Articles</h2>
             <div class="entry">
                 <ul>
-                    <li>J. Choi, J. Lee, E. Choi and J. Ahn, "Sequential Vertiport Location Optimization Considering Uncertain Social Benefit," Journal of Aerospace Information Systems, 2026 (Accepted).</li>
-                    <li>E. Choi and K. Ho, "Orbital Depot Location Optimization for Satellite Constellation Servicing with Low-Thrust Transfers," Journal of Spacecraft and Rockets, Vol. 63, No. 1, 2026, pp.4-13.</li>
-                    <li>C. Moon, E. Choi, and J. Ahn, "Aerial-Ground Collaborative Routing with Uncertain Exploration Value," International Journal of Aeronautical & Space Sciences, Vol. 26, 2025, pp. 2817-2841.</li>
-                    <li>E. Choi and J. Ahn, "Optimal Multi-agent Grouping and Routing with Cooperative Tasks," Journal of Aerospace Information Systems, Vol. 22, No. 3, 2025, pp. 163-176.</li>
+                    <li>J. Choi, J. Lee, E. Choi and J. Ahn, "Sequential Vertiport Location Optimization Considering Uncertain Social Benefit," Journal of Aerospace Information Systems, 2026 (Accepted)[cite: 25].</li>
+                    <li>E. Choi and K. Ho, "Orbital Depot Location Optimization for Satellite Constellation Servicing with Low-Thrust Transfers," Journal of Spacecraft and Rockets, Vol. 63, No. 1, 2026, pp.4-13[cite: 26, 27].</li>
+                    <li>C. Moon, E. Choi, and J. Ahn, "Aerial-Ground Collaborative Routing with Uncertain Exploration Value," International Journal of Aeronautical & Space Sciences, Vol. 26, 2025, pp. 2817-2841[cite: 28, 29].</li>
+                    <li>E. Choi and J. Ahn, "Optimal Multi-agent Grouping and Routing with Cooperative Tasks," Journal of Aerospace Information Systems, Vol. 22, No. 3, 2025, pp. 163-176[cite: 33, 34].</li>
+                    <li>E. Choi and W. Chang, "Multi-Agent Task Allocation with Inter-Agent Distance Constraints." Journal of Aerospace Information Systems, Vol. 21, No. 2, 2024, pp. 168-177[cite: 35, 36].</li>
+                    <li>E. Choi and J. Ahn, "Optimal Planetary Surface Exploration with Heterogeneous Agents," Journal of Spacecraft and Rockets, Vol. 60, No. 4, 2023, pp. 1343-1354[cite: 37, 38].</li>
+                    <li>E. Choi and J. Ahn, "Optimal Planetary Surface Routing Considering Exploration Values and Synergies," Journal of Aerospace Information Systems, Vol. 19, No. 6, 2022, pp. 406-420[cite: 39, 40].</li>
                 </ul>
             </div>
 
             <h2>Selected Conference Papers</h2>
             <div class="entry">
                 <ul>
-                    <li>T. Noro, K. Ho, E. Choi. S. Han, and M. Isaji, "Low-Thrust Trajectory Optimization via Sequential Convex Programming for On-Orbit Servicing in GEO," The Japan Society for Aeronautical and Space Sciences 57th Annual Meeting, April 2026.</li>
-                    <li>E. Choi and K. Ho, "Optimal Routing and Trajectory Planning for Asteroid Mining with Partial In-Situ Resource Utilization," 2026 AIAA SciTech Forum, January 2026.</li>
-                    <li>E. Choi, S. Lim, Y. Kim, and J. Ahn, "Optimal planetary surface routing considering heterogeneous agents and cooperative tasks," 2024 AIAA SciTech Forum, January 2024.</li>
+                    <li>T. Noro, K. Ho, E. Choi. S. Han, and M. Isaji, "Low-Thrust Trajectory Optimization via Sequential Convex Programming for On-Orbit Servicing in GEO," The Japan Society for Aeronautical and Space Sciences 57th Annual Meeting, April 2026[cite: 42].</li>
+                    <li>E. Choi and K. Ho, "Optimal Routing and Trajectory Planning for Asteroid Mining with Partial In-Situ Resource Utilization," 2026 AIAA SciTech Forum, January 2026[cite: 43].</li>
+                    <li>E. Choi and J. Ahn, "Optimal Routing Problem with Precedence Constraints for Surface Exploration," 2024 AIAA SciTech Forum, January 2024[cite: 44].</li>
                 </ul>
             </div>
         </div>
@@ -332,29 +365,29 @@
             <div class="entry">
                 <div class="entry-header">
                     <span class="entry-title">Georgia Institute of Technology</span>
-                    <span class="entry-date">Aug. 2024 – Present</span>
+                    <span class="entry-date">Aug. 2024 – Present [cite: 22]</span>
                 </div>
                 <ul>
-                    <li>Graduate Research Assistant.</li>
+                    <li>Graduate Research Assistant[cite: 17].</li>
                 </ul>
             </div>
 
             <div class="entry">
                 <div class="entry-header">
                     <span class="entry-title">Agency for Defense Development (ADD)</span>
-                    <span class="entry-date">Jun. 2019 – May. 2022</span>
+                    <span class="entry-date">Jun. 2019 – May. 2022 [cite: 24]</span>
                 </div>
                 <ul>
-                    <li>Aerospace Technology Research Institute, Researcher.</li>
+                    <li>Aerospace Technology Research Institute, Researcher[cite: 18].</li>
                 </ul>
             </div>
 
             <h2>Selected Projects</h2>
             <div class="entry">
                 <ul>
-                    <li><strong>ATLAS: Advancing Technologies for Logistics Architectures in Space</strong> (AFRL/AFOSR, Georgia Tech): Suggested a problem determining the orbital depots' orbital elements for constellation servicing.</li>
-                    <li><strong>Space Logistics Model for Temporary Deployment of Earth Imaging Satellites</strong> (ThinkOrbital, Georgia Tech): Devised a solution framework to find optimal depot locations for deploying Earth-observing satellites.</li>
-                    <li><strong>Tactical Swarm Unmanned Aerial Vehicle Mission Planning</strong> (LIG Nex1, KAIST): Presented an optimal mission planning approach for the cooperative reconnaissance of multiple UAVs.</li>
+                    <li><strong>ATLAS: Advancing Technologies for Logistics Architectures in Space</strong> (AFRL/AFOSR, Georgia Tech): Suggested a problem determining the orbital depots' orbital elements for constellation servicing[cite: 73].</li>
+                    <li><strong>Space Logistics Model for Temporary Deployment of Earth Imaging Satellites</strong> (ThinkOrbital, Georgia Tech): Devised a solution framework to find optimal depot locations for deploying Earth-observing satellites[cite: 73].</li>
+                    <li><strong>Tactical Swarm Unmanned Aerial Vehicle Mission Planning</strong> (LIG Nex1, KAIST): Presented an optimal mission planning approach for the cooperative reconnaissance of multiple UAVs[cite: 73].</li>
                 </ul>
             </div>
         </div>
@@ -362,11 +395,10 @@
         <div id="Contact" class="tab-content">
             <h2>Contact Information</h2>
             <div class="entry">
-                <p><strong>Primary Email:</strong> <a href="mailto:ehchoi@gatech.edu">ehchoi@gatech.edu</a></p>
-                <p><strong>Secondary Email:</strong> <a href="mailto:euihyeon.choi@kaist.ac.kr">euihyeon.choi@kaist.ac.kr</a></p>
-                <p><strong>Phone:</strong> +1-404-860-9436 (USA) / +82-10-2833-8378 (Korea)</p>
-                <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/ehchoi" target="_blank">linkedin.com/in/ehchoi</a></p>
-                <p><strong>Location:</strong> Atlanta, GA, USA</p>
+                <p><strong>Email:</strong> <a href="mailto:ehchoi@gatech.edu">ehchoi@gatech.edu</a> [cite: 8]</p>
+                <p><strong>Phone:</strong> +1-404-860-9436 (USA) / +82-10-2833-8378 (Korea) [cite: 8]</p>
+                <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/ehchoi" target="_blank">linkedin.com/in/ehchoi</a> [cite: 8]</p>
+                <p><strong>Location:</strong> Atlanta, GA, USA [cite: 9]</p>
             </div>
 
             <h2>Download Full CV</h2>
@@ -382,23 +414,19 @@
         function openTab(evt, tabName) {
             var i, tabcontent, tablinks;
             
-            // Hide all tab content
             tabcontent = document.getElementsByClassName("tab-content");
             for (i = 0; i < tabcontent.length; i++) {
                 tabcontent[i].style.display = "none";
             }
             
-            // Remove 'active' class from all buttons
             tablinks = document.getElementsByClassName("tab-link");
             for (i = 0; i < tablinks.length; i++) {
                 tablinks[i].className = tablinks[i].className.replace(" active", "");
             }
             
-            // Show the current tab, and add an "active" class to the button that opened the tab
             document.getElementById(tabName).style.display = "block";
             evt.currentTarget.className += " active";
             
-            // Optional: Scroll to top of container when tab changes
             window.scrollTo(0, 0);
         }
     </script>
