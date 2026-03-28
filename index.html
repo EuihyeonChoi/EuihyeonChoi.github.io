@@ -244,8 +244,18 @@
         @media (max-width: 768px) {
             header h1 { font-size: 2.2rem; }
             .tab-nav button { padding: 12px 15px; font-size: 14px; }
-            .intro-container { flex-direction: column; align-items: center; text-align: center; gap: 20px; }
-            .intro-photo-area { flex: 0 0 auto; width: 180px; }
+            .intro-container { 
+            flex-direction: column; 
+            align-items: flex-start; /* 왼쪽 정렬 */
+            text-align: left;        /* 텍스트 왼쪽 정렬 */
+            gap: 20px; 
+            }
+        
+        .intro-photo-area { 
+            flex: 0 0 auto; 
+            width: 150px; /* 모바일에서 사진 크기를 살짝 줄여 가독성 확보 */
+            margin: 0 auto; /* 사진 자체는 가운데 두는 것이 안정적이라면 유지, 아니면 삭제 */
+            }
             .entry-header { flex-direction: column; align-items: flex-start; }
             .entry-date { margin-top: 5px; }
         }
@@ -277,7 +287,7 @@
                 </div>
                 <div class="intro-text-area">
                     <h2>Biography</h2>
-                    <p>Hello! I am Euihyeon Choi (pronounced <strong>E-hyun</strong>; "Eui" sounds like the letter 'E', and "hyeon" sounds like the first part of 'Hyundai'), a Ph.D. Student in the Daniel Guggenheim School of Aerospace Engineering at the Georgia Institute of Technology.</p>
+                    <p>Hello! I am Euihyeon Choi. My name is pronounced <em>E-hyun</em> ("Eui" as in the letter 'E' and "hyeon" as in 'Hyundai'), and I am a Ph.D. Student in the Daniel Guggenheim School of Aerospace Engineering at the Georgia Institute of Technology.</p>
                     <p>Before joining Georgia Tech, I worked as a Researcher at the Aerospace Technology Research Institute within the Agency for Defense Development (ADD) in South Korea. I received my Master of Science in Aerospace Engineering, as well as a Bachelor of Science in both Aerospace Engineering and Physics (Double Major) from the Korea Advanced Institute of Science and Technology (KAIST).</p>
                 </div>
             </div>
