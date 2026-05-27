@@ -259,6 +259,50 @@
             .entry-header { flex-direction: column; align-items: flex-start; }
             .entry-date { margin-top: 5px; }
         }
+
+        /* Research Thrust Layout Extensions */
+        .thrust-layout {
+            display: flex;
+            gap: 30px;
+            align-items: flex-start;
+        }
+        .thrust-text-area {
+            flex: 1;
+        }
+        .thrust-img-area {
+            flex: 0 0 280px;
+            text-align: center;
+        }
+        .thrust-media {
+            width: 100%;
+            height: auto;
+            border-radius: 6px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border: 1px solid #eee;
+        }
+        .thrust-img-caption {
+            font-size: 0.8rem;
+            color: #777;
+            margin-top: 6px;
+            font-style: italic;
+            line-height: 1.3;
+        }
+        .entry ul ul {
+            margin-top: 5px;
+            padding-left: 15px;
+        }
+        @media (max-width: 768px) {
+            .thrust-layout {
+                flex-direction: column;
+                gap: 20px;
+            }
+            .thrust-img-area {
+                flex: 0 0 auto;
+                width: 100%;
+                max-width: 400px;
+                margin: 0 auto;
+            }
+        }
     </style>
     <meta name="google-site-verification" content="UpwBiEer_ej0zl1IZc4ORTsCDMaN-Uy33bCX9Qn9J28" />
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2250%22 cy=%2250%22 r=%2250%22 fill=%22%23003057%22/><text y=%2250%22 x=%2250%22 fill=%22%23B3A369%22 font-family=%22Arial, sans-serif%22 font-size=%2245%22 font-weight=%22bold%22 dominant-baseline=%22central%22 text-anchor=%22middle%22>EC</text></svg>">
@@ -295,15 +339,16 @@
 
             <h2>Research Interests</h2>
             <div class="entry">
-                My research focuses on developing optimization-based frameworks for high-level decision-making in space logistics, planetary surface exploration, and multi-agent systems. By integrating higher-fidelity analysis into combinatorial optimization techniques, I aim to provide critical insights for the design and operation of present and future aerospace systems.         
+                My research focuses on developing optimization-based frameworks for high-level decision-making in <strong>space systems operations</strong>, <strong>multi-agent mission planning</strong>, and <strong>complex engineering architectures</strong>. By integrating high-fidelity engineering analysis with mathematical programming and operations research, I aim to provide rigorous, scalable insights for the design, synthesis, and operation of next-generation aerospace systems.     
             </div>
 
             <div class="interest-tags">
-                <span class="interest-tag">Space Logistics & Orbital Depots</span>
-                <span class="interest-tag">In-Space Servicing</span>
-                <span class="interest-tag">Planetary Surface Routing</span>
+                <span class="interest-tag">Space Systems Operations</span>
+                <span class="interest-tag">On-Orbit Servicing & Trajectory Design</span>
                 <span class="interest-tag">Multi-Agent Task Allocation</span>
-                <span class="interest-tag">Mission Architecture Design</span>
+                <span class="interest-tag">Planetary Surface Exploration</span>
+                <span class="interest-tag">System Architecture Optimization</span>
+                <span class="interest-tag">Mathematical Programming & OR</span>
             </div>
 
             <h2>Education</h2>
@@ -332,36 +377,79 @@
                 <div class="entry-header">
                     <span class="entry-title">Thrust 1: Space Systems Operation & Mission Optimization</span>
                 </div>
-                <p><strong>Focus:</strong> On-orbit servicing operations, integrated routing and trajectory design, and mission scheduling.</p>
-                <p>Moving beyond macro-level logistics architectures, this thrust focuses on the high-fidelity operational optimization of space assets. By coupling orbital mechanics (e.g., high- or low-thrust transfers) with high-level routing and scheduling, this research develops mathematical frameworks to maximize operational efficiency for satellite constellation servicing, asteroid mining, and in-space recycling for sustainable space operations.</p>
-                <ul>
-                    <li><strong>Highlighted Publication:</strong> "Orbital Depot Location Optimization for Satellite Constellation Servicing with Low-Thrust Transfers" (<em>Journal of Spacecraft and Rockets</em>, 2026)</li>
-                    <li><strong>Tool:</strong> <a href="https://github.com/EuihyeonChoi/CLRPOD" target="_blank">CLRPOD v1.0.0</a> (Continuous Location Routing Problem for Orbital Depot)</li>
-                </ul>
+                <div class="thrust-layout">
+                    <div class="thrust-text-area">
+                        <p><strong>Focus:</strong> On-orbit servicing operations, integrated routing and trajectory design, and mission scheduling.</p>
+                        <p>Moving beyond macro-level logistics architectures, this thrust focuses on the high-fidelity operational optimization of space assets. By coupling orbital mechanics (e.g., high- or low-thrust transfers) with high-level routing and scheduling, this research develops mathematical frameworks to maximize operational efficiency for satellite constellation servicing, asteroid mining, and in-space recycling for sustainable space operations.</p>
+                        
+                        <ul>
+                            <li><strong>Highlighted Publications:</strong>
+                                <ul>
+                                    <li><strong>E. Choi</strong> and K. Ho, "<a href="https://doi.org/10.2514/1.A36386" target="_blank">Orbital Depot Location Optimization for Satellite Constellation Servicing with Low-Thrust Transfers</a>," <em>Journal of Spacecraft and Rockets</em>, 2026.</li>
+                                </ul>
+                            </li>
+                            <li><strong>Open-Source Tools & Software:</strong>
+                                <ul>
+                                    <li><a href="https://github.com/EuihyeonChoi/CLRPOD" target="_blank">CLRPOD v1.0.0</a> (Continuous Location Routing Problem for Orbital Depot)</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="thrust-img-area">
+                        <img src="Thrust1.PNG" alt="Space Systems Operation Concept Diagram" class="thrust-media">
+                        <div class="thrust-img-caption">Source: Choi & Ho, <em>JSR</em> (2026)</div>
+                    </div>
+                </div>
             </div>
 
             <div class="entry">
                 <div class="entry-header">
                     <span class="entry-title">Thrust 2: Multi-Agent Task Allocation & Planetary Surface Exploration</span>
                 </div>
-                <p><strong>Focus:</strong> Cooperative routing, heterogeneous agents, and autonomous decision-making under uncertainty.</p>
-                <p>This thrust designs cooperative routing and task allocation algorithms tailored for heterogeneous agents (such as aerial-ground collaborative systems) in terrestrial mission operations or planetary surface exploration. The core research centers on mathematically modeling the complex value systems, practical fuel/distance constraints, and leveraging heterogeneous capabilities to enable autonomous decision-making.</p>
-                <ul>
-                    <li><strong>Highlighted Publication:</strong> "Optimal Planetary Surface Exploration with Heterogeneous Agents" (<em>Journal of Spacecraft and Rockets</em>, 2023)</li>
-                    <li><strong>Highlighted Publication:</strong> "Optimal Multi-agent Grouping and Routing with Cooperative Tasks" (<em>Journal of Aerospace Information Systems</em>, 2025)</li>
-                </ul>
+                <div class="thrust-layout">
+                    <div class="thrust-text-area">
+                        <p><strong>Focus:</strong> Cooperative routing, heterogeneous agents, and autonomous decision-making under uncertainty.</p>
+                        <p>This thrust designs cooperative routing and task allocation algorithms tailored for heterogeneous agents (such as aerial-ground collaborative systems) in terrestrial mission operations or planetary surface exploration. The core research centers on mathematically modeling complex value systems, practical fuel/distance constraints, and leveraging heterogeneous capabilities to enable autonomous decision-making.</p>
+                        
+                        <ul>
+                            <li><strong>Highlighted Publications:</strong>
+                                <ul>
+                                    <li><strong>E. Choi</strong> and J. Ahn, "<a href="https://doi.org/10.2514/1.I011478" target="_blank">Optimal Multi-agent Grouping and Routing with Cooperative Tasks</a>," <em>Journal of Aerospace Information Systems</em>, 2025.</li>
+                                    <li><strong>E. Choi</strong> and J. Ahn, "<a href="https://doi.org/10.2514/1.A35632" target="_blank">Optimal Planetary Surface Exploration with Heterogeneous Agents</a>," <em>Journal of Spacecraft and Rockets</em>, 2023.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="thrust-img-area">
+                        <img src="Thrust2.png" alt="Multi-Agent Task Allocation Diagram" class="thrust-media">
+                        <div class="thrust-img-caption">Source: Choi & Ahn, <em>JAIS</em> (2025)</div>
+                    </div>
+                </div>
             </div>
 
             <div class="entry">
                 <div class="entry-header">
                     <span class="entry-title">Thrust 3: System Architecture Design & Complex Engineering Optimization</span>
                 </div>
-                <p><strong>Focus:</strong> Systems engineering methodologies, architectural synthesis, and strategic infrastructure planning under uncertainty.</p>
-                <p>This thrust leverages operations research and mathematical programming to formalize and optimize the high-level architectures of complex engineering systems. By integrating multidisciplinary constraints, multi-objective trade-offs, and environmental uncertainties, this research provides rigorous, scalable decision-making tools for next-generation engineering systems.</p>
-                <ul>
-                    <li><strong>Highlighted Publication:</strong> "Mathematical Programming-Based Design Structure Matrix Clustering for Modular Architecture Design" (<em>Journal of Mechanical Design</em>, 2025)</li>
-                    <li><strong>Highlighted Publication:</strong> "Sequential Vertiport Location Optimization Considering Uncertain Social Benefit" (<em>Journal of Aerospace Information Systems</em>, 2026)</li>
-                </ul>
+                <div class="thrust-layout">
+                    <div class="thrust-text-area">
+                        <p><strong>Focus:</strong> Systems engineering methodologies, architectural synthesis, and strategic infrastructure planning under uncertainty.</p>
+                        <p>This thrust leverages operations research and mathematical programming to formalize and optimize the high-level architectures of complex engineering systems. By integrating multidisciplinary constraints, multi-objective trade-offs, and environmental uncertainties, this research provides rigorous, scalable decision-making tools for next-generation engineering systems.</p>
+                        
+                        <ul>
+                            <li><strong>Highlighted Publications:</strong>
+                                <ul>
+                                    <li>J. Kim, <strong>E. Choi</strong>, J. Ahn, E.S. Suh, J. Kim, and D.G. Lim, "<a href="https://doi.org/10.1115/1.4068100" target="_blank">Mathematical Programming-Based Design Structure Matrix Clustering for Modular Architecture Design</a>," <em>Journal of Mechanical Design</em>, 2025.</li>
+                                    <li>J. Choi, J. Lee, <strong>E. Choi</strong>, and J. Ahn, "<a href="https://doi.org/10.2514/1.I011634" target="_blank">Sequential Vertiport Location Optimization Considering Uncertain Social Benefit</a>," <em>Journal of Aerospace Information Systems</em>, 2026.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="thrust-img-area">
+                        <img src="Thrust3.png" alt="System Architecture Optimization Design" class="thrust-media">
+                        <div class="thrust-img-caption">Source: Kim et al., <em>JMD</em> (2025)</div>
+                    </div>
+                </div>
             </div>
         </div>
 
