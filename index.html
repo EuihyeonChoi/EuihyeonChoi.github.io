@@ -304,6 +304,42 @@
                 margin: 0 auto;
             }
         }
+        /* Two-image layout for each research thrust */
+        .thrust-image-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 20px;
+            margin-top: 22px;
+        }
+
+        .thrust-image-item {
+            text-align: center;
+        }
+
+        .thrust-image-item img {
+            width: 100%;
+            height: 240px;
+            object-fit: contain;
+            background-color: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        }
+
+        .thrust-image-item .thrust-img-caption {
+            margin-top: 8px;
+        }
+
+        @media (max-width: 768px) {
+            .thrust-image-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .thrust-image-item img {
+                height: auto;
+                max-height: 320px;
+            }
+        }
     </style>
     <meta name="google-site-verification" content="UpwBiEer_ej0zl1IZc4ORTsCDMaN-Uy33bCX9Qn9J28" />
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2250%22 cy=%2250%22 r=%2250%22 fill=%22%23003057%22/><text y=%2250%22 x=%2250%22 fill=%22%23B3A369%22 font-family=%22Arial, sans-serif%22 font-size=%2245%22 font-weight=%22bold%22 dominant-baseline=%22central%22 text-anchor=%22middle%22>EC</text></svg>">
@@ -312,7 +348,7 @@
 
     <header>
         <h1 onclick="document.querySelector('.tab-link').click();" style="cursor: pointer; display: inline-block;">Euihyeon Choi <span style="font-size: 1.8rem; font-weight: 400; opacity: 0.8; margin-left: 10px;">(최의현)</span></h1>
-        <p>Ph.D. Student in Aerospace Engineering | Georgia Institute of Technology</p>
+        <p>Ph.D. Student at Georgia Tech | Integrated Decision-Making for Autonomous Aerospace Systems</p>
     </header>
 
     <div class="tab-nav">
@@ -333,29 +369,30 @@
                 </div>
                 <div class="intro-text-area">
                     <h2>Biography</h2>
-                    <p>Hello! I am Euihyeon Choi. My name is pronounced <em>E-hyun</em> ("Eui" as in the letter 'E' and "hyeon" as in 'Hyundai'), and I am a Ph.D. Student in the Daniel Guggenheim School of Aerospace Engineering at the Georgia Institute of Technology.</p>
+                    <p>I am a Ph.D. student in Aerospace Engineering at the Georgia Institute of Technology, advised by Prof. Koki Ho. My research develops integrated decision-making frameworks for autonomous aerospace systems by connecting mission operations, multi-agent coordination, and system architecture through optimization, operations research, and aerospace domain knowledge.</p>
                     <p>Before joining Georgia Tech, I worked as a Researcher at the Aerospace Technology Research Institute within the Agency for Defense Development (ADD) in South Korea. I received my Master of Science in Aerospace Engineering, as well as a Bachelor of Science in both Aerospace Engineering and Physics (Double Major) from the Korea Advanced Institute of Science and Technology (KAIST).</p>
+                    <p>My name is pronounced <em>E-hyun</em> ("Eui" as in the letter 'E' and "hyeon" as in 'Hyundai').</p>
                 </div>
             </div>
 
-            <h2>Research Interests</h2>
+            <h2>Research Vision</h2>
             <div class="entry">
-                My research focuses on developing optimization-based frameworks for high-level decision-making in <strong>space systems operations</strong>, <strong>multi-agent mission planning</strong>, and <strong>complex engineering architectures</strong>. By integrating high-fidelity engineering analysis with mathematical programming and operations research, I aim to provide rigorous, scalable insights for the design, synthesis, and operation of next-generation aerospace systems.     
+                My research develops <strong>integrated decision-making frameworks for autonomous aerospace systems</strong>. I study how decisions across <strong>mission operations</strong>, <strong>multi-agent coordination</strong>, and <strong>system architecture</strong> should be connected mathematically and computationally. By combining aerospace domain knowledge with optimization, operations research, and systems engineering, I aim to enable scalable, adaptive, and resource-aware decision-making for future air and space missions.   
             </div>
 
             <div class="interest-tags">
-                <span class="interest-tag">Space Systems Operations</span>
-                <span class="interest-tag">On-Orbit Servicing & Trajectory Design</span>
-                <span class="interest-tag">Multi-Agent Task Allocation</span>
-                <span class="interest-tag">Planetary Surface Exploration</span>
-                <span class="interest-tag">System Architecture Optimization</span>
-                <span class="interest-tag">Mathematical Programming & OR</span>
+                <span class="interest-tag">Integrated Mission Planning &amp; Operations</span>
+                <span class="interest-tag">Adaptive Multi-Agent Coordination</span>
+                <span class="interest-tag">Operations-Informed System Architecture</span>
+                <span class="interest-tag">Space Logistics &amp; Infrastructure</span>
+                <span class="interest-tag">Optimization &amp; Operations Research</span>
+                <span class="interest-tag">Autonomous Aerospace Systems</span>
             </div>
 
             <h2>Education</h2>
             <div class="entry">
                 <ul>
-                    <li>Ph.D. Student, Aerospace Engineering, Georgia Institute of Technology, 2024&ndash;Present</li>
+                    <li>Ph.D. in Aerospace Engineering, Georgia Institute of Technology, expected August 2027</li>
                     <li>M.S., Aerospace Engineering, Korea Advanced Institute of Science and Technology (KAIST), 2024</li>
                     <li>B.S., Aerospace Engineering and Physics (Double Major), Korea Advanced Institute of Science and Technology (KAIST), 2019</li>
                 </ul>
@@ -364,96 +401,228 @@
             <h2>Selected Publications</h2>
             <div class="entry">
                 <ul>
+                    <li><strong>E. Choi</strong> and K. Ho, "<a href="https://doi.org/10.48550/arXiv.2604.18826" target="_blank">Formulation and Analysis for Integrated Spacecraft Routing and Trajectory Design Problem</a>," <em>Journal of Spacecraft and Rockets</em> (Accepted).</li>
                     <li><strong>E. Choi</strong> and K. Ho, "<a href="https://doi.org/10.2514/1.A36386" target="_blank">Orbital Depot Location Optimization for Satellite Constellation Servicing with Low-Thrust Transfers</a>," <em>Journal of Spacecraft and Rockets</em>, Vol. 63, No. 1, 2026, pp.4&ndash;13.</li>
                     <li><strong>E. Choi</strong> and J. Ahn, "<a href="https://doi.org/10.2514/1.A35632" target="_blank">Optimal Planetary Surface Exploration with Heterogeneous Agents</a>," <em>Journal of Spacecraft and Rockets</em>, Vol. 60, No. 4, 2023, pp. 1343&ndash;1354.</li>
-                    <li><strong>E. Choi</strong> and J. Ahn, "<a href="https://doi.org/10.2514/1.I011052" target="_blank">Optimal Planetary Surface Routing Considering Exploration Values and Synergies</a>," <em>Journal of Aerospace Information Systems</em>, Vol. 19, No. 6, 2022, pp. 406&ndash;420.</li>
                 </ul>
             </div>
         </div>
 
         <div id="Research" class="tab-content">
-            <h2>Research Thrusts</h2>
+        <h2>Research Overview</h2>
+        
+        <div class="entry">
+            <p style="font-size: 1.05rem; line-height: 1.7; margin-bottom: 15px;">
+                My research develops integrated decision-making frameworks for
+                autonomous aerospace systems operating across air and space domains.
+                The program connects three decision scales: how aerospace systems are
+                operated, how autonomous agents are coordinated, and how systems and
+                infrastructure are designed.
+            </p>
             
-            <div class="entry">
-                <div class="entry-header">
-                    <span class="entry-title">Thrust 1: Space Systems Operation & Mission Optimization</span>
-                </div>
-                <div class="thrust-layout">
-                    <div class="thrust-text-area">
-                        <p><strong>Focus:</strong> On-orbit servicing operations, integrated routing and trajectory design, and mission scheduling.</p>
-                        <p>Moving beyond macro-level logistics architectures, this thrust focuses on the high-fidelity operational optimization of space assets. By coupling orbital mechanics (e.g., high- or low-thrust transfers) with high-level routing and scheduling, this research develops mathematical frameworks to maximize operational efficiency for satellite constellation servicing, asteroid mining, and in-space recycling for sustainable space operations.</p>
-                        
-                        <ul>
-                            <li><strong>Highlighted Publications:</strong>
-                                <ul>
-                                    <li><strong>E. Choi</strong> and K. Ho, "<a href="https://doi.org/10.2514/1.A36386" target="_blank">Orbital Depot Location Optimization for Satellite Constellation Servicing with Low-Thrust Transfers</a>," <em>Journal of Spacecraft and Rockets</em>, Vol. 63, No. 1, 2026, pp. 4&ndash;13.</li>
-                                    <li><strong>E. Choi</strong> and K. Ho, "<a href="https://arxiv.org/abs/2604.18826" target="_blank">Formulation and Analysis for Integrated Spacecraft Routing and Trajectory Design Problem</a>," <em>Journal of Spacecraft and Rockets</em> (Accepted).</li>
-                                </ul>
-                            </li>
-                            <li><strong>Open-Source Tools & Software:</strong>
-                                <ul>
-                                    <li><a href="https://github.com/EuihyeonChoi/CLRPOD" target="_blank">CLRPOD v1.0.0</a> (Continuous Location Routing Problem for Orbital Depot)</li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="thrust-img-area">
-                        <img src="Thrust1.PNG" alt="Space Systems Operation Concept Diagram" class="thrust-media">
-                        <div class="thrust-img-caption">Source: Choi & Ho, <em>JSR</em> (2026)</div>
-                    </div>
+            <div style="text-align: center; margin: 25px 0 10px 0;">
+                <img src="Research Outline-1.png" alt="Integrated Decision-Making Framework" style="width: 100%; max-width: 800px; border-radius: 4px; border: 1px solid #ccc;">
+                <div style="font-size: 0.85rem; color: #555; margin-top: 8px; font-style: italic;">
+                    Integrated research framework connecting mission operations, multi-agent coordination, and systems architecture.
                 </div>
             </div>
+        </div>
 
-            <div class="entry">
-                <div class="entry-header">
-                    <span class="entry-title">Thrust 2: Multi-Agent Task Allocation & Planetary Surface Exploration</span>
-                </div>
-                <div class="thrust-layout">
-                    <div class="thrust-text-area">
-                        <p><strong>Focus:</strong> Cooperative routing, heterogeneous agents, and autonomous decision-making under uncertainty.</p>
-                        <p>This thrust designs cooperative routing and task allocation algorithms tailored for heterogeneous agents (such as aerial-ground collaborative systems) in terrestrial mission operations or planetary surface exploration. The core research centers on mathematically modeling complex value systems, practical fuel/distance constraints, and utilizing heterogeneous capabilities to enable autonomous decision-making.</p>
-                        
-                        <ul>
-                            <li><strong>Highlighted Publications:</strong>
-                                <ul>
-                                    <li><strong>E. Choi</strong> and J. Ahn, "<a href="https://doi.org/10.2514/1.I011478" target="_blank">Optimal Multi-agent Grouping and Routing with Cooperative Tasks</a>," <em>Journal of Aerospace Information Systems</em>, Vol. 22, No. 3, 2025, pp. 163&ndash;176.</li>
-                                    <li><strong>E. Choi</strong> and J. Ahn, "<a href="https://doi.org/10.2514/1.A35632" target="_blank">Optimal Planetary Surface Exploration with Heterogeneous Agents</a>," <em>Journal of Spacecraft and Rockets</em>, Vol. 60, No. 4, 2023, pp. 1343&ndash;1354.</li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="thrust-img-area">
-                        <img src="Thrust2.png" alt="Multi-Agent Task Allocation Diagram" class="thrust-media">
-                        <div class="thrust-img-caption">Source: Choi & Ahn, <em>JAIS</em> (2025)</div>
-                    </div>
-                </div>
+        <h2>Research Thrusts</h2>
+
+        <div class="entry">
+            <div class="entry-header">
+                <span class="entry-title" style="font-size: 1.15rem;">
+                    Thrust 1 (OPERATE): Integrated Mission Planning and Operations
+                </span>
             </div>
 
-            <div class="entry">
-                <div class="entry-header">
-                    <span class="entry-title">Thrust 3: System Architecture Design & Complex Engineering Optimization</span>
-                </div>
-                <div class="thrust-layout">
-                    <div class="thrust-text-area">
-                        <p><strong>Focus:</strong> Systems engineering methodologies, architectural synthesis, and strategic infrastructure planning under uncertainty.</p>
-                        <p>This thrust leverages operations research and mathematical programming to formalize and optimize the high-level architectures of complex engineering systems. By integrating multidisciplinary constraints, multi-objective trade-offs, and environmental uncertainties, this research provides rigorous, scalable decision-making tools for next-generation engineering systems.</p>
-                        
-                        <ul>
-                            <li><strong>Highlighted Publications:</strong>
-                                <ul>
-                                    <li>J. Kim, <strong>E. Choi</strong>, J. Ahn, E.S. Suh, J. Kim, and D.G. Lim, "<a href="https://doi.org/10.1115/1.4068100" target="_blank">Mathematical Programming-Based Design Structure Matrix Clustering for Modular Architecture Design</a>," <em>Journal of Mechanical Design</em>, Vol. 147, No. 10, 2025, 101401.</li>
-                                    <li>J. Choi, J. Lee, <strong>E. Choi</strong>, and J. Ahn, "<a href="https://doi.org/10.2514/1.I011634" target="_blank">Sequential Vertiport Location Optimization Considering Uncertain Social Benefit</a>," <em>Journal of Aerospace Information Systems</em>, 2026, pp. 1&ndash;16.</li>
-                                </ul>
-                            </li>
-                        </ul>
+            <div class="thrust-text-area">
+                <p>
+                    <strong>Core Focus:</strong>
+                    Integrated optimization of routing, scheduling, trajectory design, 
+                    resource allocation, and infrastructure utilization for servicing, 
+                    exploration, and space logistics.
+                </p>
+
+                <p><strong>Key Contributions:</strong></p>
+                <ul>
+                    <li>
+                        <strong>Integrated Spacecraft Routing and Trajectory Design:</strong>
+                        Developed arc- and path-based formulations jointly optimizing
+                        satellite selection, visiting sequences, en route refueling,
+                        and time-dependent trajectories, achieving comparable mission
+                        performance with an approximately 100-fold reduction in
+                        computation time.
+                    </li>
+                    <li>
+                        <strong>In-Situ Resource Utilization-based Mission Planning:</strong>
+                        Developed planning models for ISRU-supported surface exploration,
+                        orbital resource recycling, and cislunar transportation campaigns.
+                    </li>
+                </ul>
+
+                <p><strong>Future Directions:</strong></p>
+                <ul>
+                    <li>
+                        <strong>Adaptive-Fidelity Planning:</strong>
+                        Selectively refining physical models when additional detail
+                        changes mission-level decisions.
+                    </li>
+                    <li>
+                        <strong>Uncertainty-Aware Operations:</strong>
+                        Revising schedules and resource flows as demand, vehicle
+                        states, and infrastructure availability change.
+                    </li>
+                </ul>
+            </div>
+
+            <div class="thrust-image-grid">
+                <div class="thrust-image-item">
+                    <img src="Thrust1_1.png" alt="Integrated spacecraft routing and trajectory design">
+                    <div class="thrust-img-caption">
+                        Integrated spacecraft routing and trajectory design (Choi and Ho, JSR, 2026)
                     </div>
-                    <div class="thrust-img-area">
-                        <img src="Thrust3.png" alt="System Architecture Optimization Design" class="thrust-media">
-                        <div class="thrust-img-caption">Source: Kim et al., <em>JMD</em> (2025)</div>
+                </div>
+
+                <div class="thrust-image-item">
+                    <img src="Thrust1_2.png" alt="ISRU-based planetary surface exploration">
+                    <div class="thrust-img-caption">
+                        ISRU-based planetary surface exploration (Choi and Ahn, JAIS, 2026)
                     </div>
                 </div>
             </div>
         </div>
+        <div class="entry">
+            <div class="entry-header">
+                <span class="entry-title" style="font-size: 1.15rem;">
+                    Thrust 2 (COORDINATE): Adaptive Coordination of
+                    Multi-Agent Aerospace Systems
+                </span>
+            </div>
+
+            <div class="thrust-text-area">
+                <p>
+                    <strong>Core Focus:</strong>
+                    Scalable task allocation, cooperative routing, and adaptive
+                    replanning for heterogeneous aerospace agents with
+                    interdependent capabilities, resources, and information.
+                </p>
+
+                <p><strong>Key Contributions:</strong></p>
+                <ul>
+                    <li>
+                        <strong>Heterogeneous Surface Exploration:</strong>
+                        Developed a two-echelon routing framework for coordinated
+                        rover-helicopter operations, increasing exploration value 
+                        by an average of 149% relative to rover-only missions in the evaluated scenarios.
+                    </li>
+                    <li>
+                        <strong>Real-Time Adaptive Replanning:</strong>
+                        Co-developed a rolling-horizon framework with optimization,
+                        heuristic, and learning-based methods that generated feasible plans
+                        in under one second for tested instances with up to 100 tasks.
+                    </li>
+                </ul>
+
+                <p><strong>Future Directions:</strong></p>
+                <ul>
+                    <li>
+                        <strong>Cross-Domain Heterogeneous Teams:</strong>
+                        Coordinating surface, aerial, and orbital agents operating
+                        across different environments and timescales.
+                    </li>
+                    <li>
+                        <strong>Information-Aware Coordination:</strong>
+                        Quantifying when the mission value of observation,
+                        communication, and shared information justifies their costs.
+                    </li>
+                </ul>
+            </div>
+
+            <div class="thrust-image-grid">
+                <div class="thrust-image-item">
+                    <img src="Thrust2_1.png" alt="Planetary surface exploration with heterogeneous agents">
+                    <div class="thrust-img-caption">
+                        Planetary surface exploration with heterogeneous agents (Choi and Ahn, JSR, 2023)
+                    </div>
+                </div>
+
+                <div class="thrust-image-item">
+                    <img src="Thrust2_2.png" alt="Adaptive planning for multiple UAVs with in-flight refueling">
+                    <div class="thrust-img-caption">
+                        Adaptive planning for multiple UAVs with in-flight refueling (Gwon et al., IJASS, 2026)
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="entry">
+            <div class="entry-header">
+                <span class="entry-title" style="font-size: 1.15rem;">
+                    Thrust 3 (DESIGN): Operations-Informed Architecture and
+                    Infrastructure Design
+                </span>
+            </div>
+
+            <div class="thrust-text-area">
+                <p>
+                    <strong>Core Focus:</strong>
+                    Optimization of aerospace architecture, infrastructure,
+                    modularity, and phased deployment based on downstream
+                    operational consequences.
+                </p>
+
+                <p><strong>Key Contributions:</strong></p>
+                <ul>
+                    <li>
+                        <strong>Continuous Orbital Depot Location-Routing:</strong>
+                        Co-optimized continuous depot locations and satellite
+                        servicing routes, reducing effective mass to low Earth orbit
+                        by 36.9% relative to the initial depot configuration in the
+                        evaluated case study.
+                    </li>
+                    <li>
+                        <strong>Constraint-Aware Architecture Design:</strong>
+                        Developed mathematical programming methods for modular
+                        architecture design and sequential infrastructure planning
+                        under practical constraints and uncertainty.
+                    </li>
+                </ul>
+
+                <p><strong>Future Directions:</strong></p>
+                <ul>
+                    <li>
+                        <strong>Phased Infrastructure Deployment:</strong>
+                        Determining when to deploy, expand, or defer space
+                        infrastructure as demand evolves.
+                    </li>
+                    <li>
+                        <strong>Modular &amp; Reconfigurable Systems:</strong>
+                        Designing interfaces that preserve future operational
+                        options while balancing lifecycle cost, risk, and
+                        adaptability.
+                    </li>
+                </ul>
+            </div>
+
+            <div class="thrust-image-grid">
+                <div class="thrust-image-item">
+                    <img src="Thrust3_1.png" alt="Continuous orbital depot location and satellite servicing routing">
+                    <div class="thrust-img-caption">
+                        Continuous orbital depot location and satellite servicing routing (Choi and Ho, JSR, 2026)
+                    </div>
+                </div>
+
+                <div class="thrust-image-item">
+                    <img src="Thrust3_2.png" alt="DSM clustering for modular architecture design">
+                    <div class="thrust-img-caption">
+                        DSM clustering for modular architecture design (Kim et al., JMD, 2025)
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
 
         <div id="Publications" class="tab-content">
             <h2>Journal Articles</h2>
@@ -461,7 +630,7 @@
                 <ol>
                     <li><strong>E. Choi</strong> and J. Ahn, "Optimal Routing for In-Situ Resource Utilization-Based Planetary Surface Explorations," <em>Journal of Aerospace Information Systems</em> (Accepted).</li>
                     <li><strong>E. Choi</strong> and K. Ho, "<a href="https://doi.org/10.48550/arXiv.2604.18826" target="_blank">Formulation and Analysis for Integrated Spacecraft Routing and Trajectory Design Problem</a>," <em>Journal of Spacecraft and Rockets</em> (Accepted).</li>
-                    <li>B. Gwon*, <strong>E. Choi</strong>*, J. Lee, and J. Ahn, "Multi-UAV Task Allocation and Real-Time Re-plan Strategy with Refueling," <em>International Journal of Aeronautical & Space Sciences</em>, (Accepted) [*These authors contributed equally].</li>
+                    <li>B. Gwon*, <strong>E. Choi</strong>*, J. Lee, and J. Ahn, "Adaptive Planning for Multiple UAVs with In-Flight Refueling," <em>International Journal of Aeronautical & Space Sciences</em>, 2026 (Accepted) [*These authors contributed equally].</li>
                     <li>J. Choi, J. Lee, <strong>E. Choi</strong> and J. Ahn, "<a href="https://doi.org/10.2514/1.I011634" target="_blank">Sequential Vertiport Location Optimization Considering Uncertain Social Benefit</a>," <em>Journal of Aerospace Information Systems</em>, 2026, pp. 1&ndash;16.</li>
                     <li><strong>E. Choi</strong> and K. Ho, "<a href="https://doi.org/10.2514/1.A36386" target="_blank">Orbital Depot Location Optimization for Satellite Constellation Servicing with Low-Thrust Transfers</a>," <em>Journal of Spacecraft and Rockets</em>, Vol. 63, No. 1, 2026, pp. 4&ndash;13.</li>
                     <li>C. Moon, <strong>E. Choi</strong>, and J. Ahn, "<a href="https://doi.org/10.1007/s42405-025-00892-z" target="_blank">Aerial-Ground Collaborative Routing with Uncertain Exploration Value</a>," <em>International Journal of Aeronautical & Space Sciences</em>, Vol. 26, 2025, pp. 2817&ndash;2841.</li>
@@ -479,7 +648,7 @@
                     <li>B. Gwon, <strong>E. Choi</strong>, and J. Ahn, "An Integer Linear Programming-Based Framework for Satellite Coverage Optimization Problem Under Operational Constraints," <em>International Journal of Aeronautical & Space Sciences</em> (Major Revision).</li>
                     <li><strong>E. Choi</strong>, J. Lee, and J. Ahn, "Multi-Commodity Lunar Campaign Optimization via Leveraging Hybrid Propulsion Systems and Resonance Orbits," <em>Journal of Spacecraft and Rockets</em> (Major Revision).</li>
                     <li><strong>E. Choi</strong>, J. Kim, J. Kim, J. Ahn, "Optimal Design Structure Matrix Clustering with Constraint Selections for Conflict Resolution," <em>Journal of Mechanical Design</em> (Under Review).</li>
-                    <li>J. Kim, <strong>E. Choi</strong>, E.S. Suh, J-H Kim, and J. Ahn, "Optimal Clustering of Design Structure Matrix for Modular Architecture Design Considering Assembly Costs," (Will be submitted to <em>IEEE Transactions on Engineering Management</em>).
+                    <li>J. Kim, <strong>E. Choi</strong>, E.S. Suh, J-H Kim, and J. Ahn, "Optimal Clustering of Design Structure Matrix for Modular Architecture Design Considering Assembly Costs," (Work in progress).</li>
                 </ol>
             </div>
 
@@ -487,6 +656,7 @@
             <div class="entry">
                 <ol>
                     <li><strong>E. Choi</strong> and K. Ho, "In-Space Recycling Logistics Optimization for Circular Space Economy," <em>2027 AIAA SciTech Forum</em>, January 2027 (Submitted).</li>
+                    <li>T. Noro, <strong>E. Choi</strong>, S. Han, M. Isaji, and K. Ho, "Optimal Scheduling of ADR Missions in the Near-GEO Region Based on a Competing-Risk Failure Model," <em>The 70th Space Sciences and Technology Conference</em>, November 2026 (Forthcoming).</li>
                     <li>T. Noro, K. Ho, <strong>E. Choi</strong>, S. Han, and M. Isaji, "Low-Thrust Trajectory Optimization via Sequential Convex Programming for On-Orbit Servicing in GEO," <em>The Japan Society for Aeronautical and Space Sciences 57th Annual Meeting</em>, April 2026.</li>
                     <li><strong>E. Choi</strong> and K. Ho, "Optimal Routing and Trajectory Planning for Asteroid Mining with Partial In-Situ Resource Utilization," <em>2026 AIAA SciTech Forum</em>, January 2026.</li>
                     <li><strong>E. Choi</strong> and J. Ahn, "Optimal Routing Problem with Precedence Constraints for Surface Exploration," <em>2024 AIAA SciTech Forum</em>, January 2024.</li>
@@ -548,6 +718,7 @@
                 </div>
                 <ul>
                     <li><strong>Graduate Research Assistant</strong>, Daniel Guggenheim School of Aerospace Engineering.</li>
+                    <li><strong>Graduate Teaching Assistant</strong>, Spacecraft Flight Dynamics, Fall 2026.</li>
                 </ul>
             </div>
 
