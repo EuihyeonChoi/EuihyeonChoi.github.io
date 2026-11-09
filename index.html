@@ -4,134 +4,138 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Euihyeon Choi | Aerospace Engineering | Georgia Tech</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        /* Professional CSS Styling */
         :root {
             --primary-color: #003057; /* GaTech Navy */
             --secondary-color: #B3A369; /* GaTech Gold */
-            --text-color: #333333;
-            --bg-color: #f8f9fa;
+            --text-color: #222222;
+            --muted-text: #555555;
+            --bg-color: #ffffff;
+            --border-color: #e5e7eb;
         }
         
         body {
-            font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.7;
             margin: 0;
             padding: 0;
             color: var(--text-color);
             background-color: var(--bg-color);
+            -webkit-font-smoothing: antialiased;
         }
 
         header {
             background-color: var(--primary-color);
             color: white;
-            padding: 50px 0;
+            padding: 38px 20px;
             text-align: center;
+            border-bottom: 3px solid var(--secondary-color);
         }
 
         header h1 {
-            margin: 0 0 10px 0;
-            font-size: 2.8rem;
-            font-weight: 800;
+            margin: 0 0 8px 0;
+            font-size: 2.3rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
         }
 
         header p {
             margin: 0;
-            font-size: 1.3rem;
-            color: #e0e0e0;
-            font-weight: 300;
+            font-size: 1.1rem;
+            color: #dce3ea;
+            font-weight: 400;
         }
 
         /* Navigation Tabs */
         .tab-nav {
             display: flex;
             justify-content: center;
-            background-color: #ffffff;
-            border-bottom: 1px solid #ddd;
+            background-color: rgba(255, 255, 255, 0.96);
+            backdrop-filter: blur(4px);
+            border-bottom: 1px solid var(--border-color);
             position: sticky;
             top: 0;
             z-index: 100;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
         }
 
         .tab-nav button {
-            background-color: inherit;
+            background-color: transparent;
             border: none;
             outline: none;
             cursor: pointer;
-            padding: 16px 28px;
-            transition: 0.3s;
-            font-size: 16px;
-            font-weight: 600;
-            color: var(--text-color);
-            border-bottom: 3px solid transparent;
+            padding: 14px 24px;
+            transition: color 0.15s ease, border-color 0.15s ease;
+            font-family: inherit;
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: var(--muted-text);
+            border-bottom: 2px solid transparent;
         }
 
         .tab-nav button:hover {
             color: var(--primary-color);
-            background-color: #f0f0f0;
         }
 
         .tab-nav button.active {
             color: var(--primary-color);
-            border-bottom: 3px solid var(--secondary-color);
+            font-weight: 600;
+            border-bottom: 2px solid var(--primary-color);
         }
 
         /* Tab Content Area */
         .container {
-            max-width: 1000px;
-            margin: 40px auto;
-            padding: 0 20px;
+            max-width: 880px;
+            margin: 44px auto 80px auto;
+            padding: 0 24px;
             min-height: 60vh;
         }
 
         .tab-content {
             display: none;
-            animation: fadeIn 0.5s;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
         }
 
         h2 {
             color: var(--primary-color);
-            border-bottom: 2px solid var(--secondary-color);
+            border-bottom: 1px solid var(--border-color);
             padding-bottom: 8px;
-            margin-top: 0;
+            margin-top: 44px;
             margin-bottom: 20px;
-            font-weight: 700;
+            font-size: 1.35rem;
+            font-weight: 600;
+            letter-spacing: -0.01em;
+        }
+
+        .tab-content > h2:first-child {
+            margin-top: 0;
         }
 
         /* Intro & Bio Section */
         .intro-container {
             display: flex;
+            flex-direction: row-reverse;
             align-items: flex-start;
             gap: 40px;
-            margin-bottom: 40px;
-            background: #fff;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            margin-bottom: 44px;
         }
 
         .intro-photo-area {
-            flex: 0 0 220px;
+            flex: 0 0 190px;
             text-align: center;
         }
 
         .profile-img {
             width: 100%;
             height: auto;
-            border-radius: 50%;
-            border: 5px solid var(--secondary-color);
-            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+            border-radius: 6px;
+            display: block;
         }
 
         .photo-placeholder-text {
             font-size: 0.85rem;
-            color: #666;
+            color: var(--muted-text);
             margin-top: 10px;
             font-style: italic;
         }
@@ -142,73 +146,87 @@
 
         .intro-text-area h2 {
             border-bottom: none;
-            margin-bottom: 10px;
+            padding-bottom: 0;
+            margin-bottom: 12px;
             margin-top: 0;
         }
 
         .intro-text-area p {
-            font-size: 1.1rem;
-            margin-bottom: 15px;
-            color: #444;
+            font-size: 1rem;
+            margin-top: 0;
+            margin-bottom: 14px;
+            color: #333;
         }
 
-        /* Lists & Entries */
+        .intro-text-area p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Content Sections (No Box) */
         .entry {
-            margin-bottom: 25px;
-            background: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
-            border-left: 4px solid transparent;
-            transition: border-color 0.3s;
+            margin-bottom: 28px;
+            padding: 0;
         }
 
-        .entry:hover {
-            border-left: 4px solid var(--secondary-color);
+        /* Subtle dividers between multiple entries under the same heading */
+        #Research .entry + .entry {
+            border-top: 1px solid var(--border-color);
+            padding-top: 32px;
+            margin-top: 32px;
+        }
+
+        #Experience .entry + .entry {
+            margin-top: 24px;
         }
 
         .entry-header {
             display: flex;
             justify-content: space-between;
             align-items: baseline;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
         }
 
         .entry-title {
-            font-weight: 700;
-            font-size: 1.15rem;
+            font-weight: 600;
+            font-size: 1.12rem;
             color: var(--primary-color);
         }
 
         .entry-date {
-            font-style: italic;
-            color: #666;
-            font-weight: 500;
+            color: var(--muted-text);
+            font-size: 0.92rem;
+            font-weight: 400;
         }
 
-        ul {
+        ul, ol {
             padding-left: 20px;
-            margin-top: 5px;
+            margin-top: 6px;
+            margin-bottom: 0;
         }
 
         li {
             margin-bottom: 10px;
         }
 
+        li:last-child {
+            margin-bottom: 0;
+        }
+
         /* Research Interests Tags */
         .interest-tags {
             display: flex;
             flex-wrap: wrap;
-            gap: 10px;
-            margin-bottom: 30px;
+            gap: 8px;
+            margin-top: 16px;
+            margin-bottom: 36px;
         }
         
         .interest-tag {
-            background-color: var(--primary-color);
-            color: white;
-            padding: 8px 15px;
-            border-radius: 20px;
-            font-size: 0.95rem;
+            background-color: #f4f5f7;
+            color: #333333;
+            padding: 5px 12px;
+            border-radius: 4px;
+            font-size: 0.88rem;
             font-weight: 500;
         }
 
@@ -227,37 +245,36 @@
             display: inline-block;
             background-color: var(--primary-color);
             color: white !important;
-            padding: 12px 24px;
-            border-radius: 5px;
-            font-weight: bold;
+            padding: 10px 20px;
+            border-radius: 4px;
+            font-size: 0.95rem;
+            font-weight: 500;
             text-decoration: none;
-            margin-top: 15px;
-            transition: background-color 0.3s, transform 0.2s;
+            margin-top: 8px;
+            transition: background-color 0.15s ease;
         }
 
         .btn-download:hover {
-            background-color: var(--secondary-color);
+            background-color: #00223e;
             text-decoration: none;
-            transform: translateY(-2px);
         }
 
         @media (max-width: 768px) {
-            header h1 { font-size: 2.2rem; }
-            .tab-nav button { padding: 12px 15px; font-size: 14px; }
+            header h1 { font-size: 1.9rem; }
+            .tab-nav { flex-wrap: wrap; }
+            .tab-nav button { padding: 10px 14px; font-size: 0.88rem; }
             .intro-container { 
-            flex-direction: column; 
-            align-items: flex-start;
-            text-align: left; 
-            gap: 20px; 
+                flex-direction: column; 
+                align-items: flex-start;
+                text-align: left; 
+                gap: 24px; 
             }
-        
-        .intro-photo-area { 
-            flex: 0 0 auto; 
-            width: 150px;
-            margin: 0 auto;
+            .intro-photo-area { 
+                flex: 0 0 auto; 
+                width: 150px;
             }
             .entry-header { flex-direction: column; align-items: flex-start; }
-            .entry-date { margin-top: 5px; }
+            .entry-date { margin-top: 2px; }
         }
 
         /* Research Thrust Layout Extensions */
@@ -277,16 +294,14 @@
             width: 100%;
             max-height: 250px; 
             object-fit: contain; 
-            border-radius: 6px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-            border: 1px solid #eee;
+            border-radius: 4px;
+            border: 1px solid var(--border-color);
         }
         .thrust-img-caption {
-            font-size: 0.8rem;
-            color: #777;
+            font-size: 0.82rem;
+            color: var(--muted-text);
             margin-top: 6px;
-            font-style: italic;
-            line-height: 1.3;
+            line-height: 1.35;
         }
         .entry ul ul {
             margin-top: 5px;
@@ -304,6 +319,7 @@
                 margin: 0 auto;
             }
         }
+
         /* Two-image layout for each research thrust */
         .thrust-image-grid {
             display: grid;
@@ -321,9 +337,8 @@
             height: 240px;
             object-fit: contain;
             background-color: #ffffff;
-            border: 1px solid #ddd;
-            border-radius: 6px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
         }
 
         .thrust-image-item .thrust-img-caption {
@@ -347,7 +362,7 @@
 <body>
 
     <header>
-        <h1 onclick="document.querySelector('.tab-link').click();" style="cursor: pointer; display: inline-block;">Euihyeon Choi <span style="font-size: 1.8rem; font-weight: 400; opacity: 0.8; margin-left: 10px;">(최의현)</span></h1>
+        <h1 onclick="document.querySelector('.tab-link').click();" style="cursor: pointer; display: inline-block;">Euihyeon Choi <span style="font-size: 1.5rem; font-weight: 400; opacity: 0.85; margin-left: 8px;">(최의현)</span></h1>
         <p>Ph.D. Candidate at Georgia Tech | Integrated Decision-Making for Autonomous Aerospace Systems</p>
     </header>
 
@@ -412,7 +427,7 @@
         <h2>Research Overview</h2>
         
         <div class="entry">
-            <p style="font-size: 1.05rem; line-height: 1.7; margin-bottom: 15px;">
+            <p style="font-size: 1.02rem; line-height: 1.7; margin-top: 0; margin-bottom: 15px;">
                 My research develops integrated decision-making frameworks for
                 autonomous aerospace systems operating across air and space domains.
                 The program connects three decision scales: how aerospace systems are
@@ -420,9 +435,9 @@
                 infrastructure are designed.
             </p>
             
-            <div style="text-align: center; margin: 25px 0 10px 0;">
-                <img src="Research Outline.png" alt="Integrated Decision-Making Framework" style="width: 100%; max-width: 800px; border-radius: 4px; border: 1px solid #ccc;">
-                <div style="font-size: 0.85rem; color: #555; margin-top: 8px; font-style: italic;">
+            <div style="text-align: center; margin: 28px 0 10px 0;">
+                <img src="Research Outline.png" alt="Integrated Decision-Making Framework" style="width: 100%; max-width: 800px; border-radius: 4px; border: 1px solid var(--border-color);">
+                <div style="font-size: 0.85rem; color: var(--muted-text); margin-top: 8px;">
                     Integrated research framework connecting mission operations, multi-agent coordination, and systems architecture.
                 </div>
             </div>
@@ -432,7 +447,7 @@
 
         <div class="entry">
             <div class="entry-header">
-                <span class="entry-title" style="font-size: 1.15rem;">
+                <span class="entry-title">
                     Thrust 1: Integrated Mission Planning and Operations
                 </span>
             </div>
@@ -496,7 +511,7 @@
         </div>
         <div class="entry">
             <div class="entry-header">
-                <span class="entry-title" style="font-size: 1.15rem;">
+                <span class="entry-title">
                     Thrust 2: Adaptive Coordination of Multi-Agent Aerospace Systems
                 </span>
             </div>
@@ -558,7 +573,7 @@
         </div>
         <div class="entry">
             <div class="entry-header">
-                <span class="entry-title" style="font-size: 1.15rem;">
+                <span class="entry-title">
                     Thrust 3: Operations-Informed Architecture and
                     Infrastructure Design
                 </span>
@@ -758,16 +773,16 @@
         <div id="Contact" class="tab-content">
             <h2>Contact Information</h2>
             <div class="entry">
-                <p><strong>Email:</strong> <a href="mailto:ehchoi@gatech.edu">ehchoi@gatech.edu</a></p>
+                <p style="margin-top: 0;"><strong>Email:</strong> <a href="mailto:ehchoi@gatech.edu">ehchoi@gatech.edu</a></p>
                 <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/ehchoi" target="_blank">linkedin.com/in/ehchoi</a></p>
                 <p><strong>Google Scholar:</strong> <a href="https://scholar.google.co.kr/citations?user=MytZ2fAAAAAJ&hl" target="_blank">Euihyeon Choi</a></p>
-                <p><strong>Location:</strong> Atlanta, GA, USA</p>
+                <p style="margin-bottom: 0;"><strong>Location:</strong> Atlanta, GA, USA</p>
             </div>
 
             <h2>Download Full CV</h2>
             <div class="entry">
-                <p>You can download a complete and up-to-date copy of my Curriculum Vitae in PDF format below.</p>
-                <a href="Euihyeon_Choi_CV.pdf" class="btn-download" target="_blank">📄 Download CV (PDF)</a>
+                <p style="margin-top: 0;">You can download a complete and up-to-date copy of my Curriculum Vitae in PDF format below.</p>
+                <a href="Euihyeon_Choi_CV.pdf" class="btn-download" target="_blank">Download CV (PDF)</a>
             </div>
         </div>
 
